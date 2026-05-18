@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PlaceAI - Professional Hub</title>
+<title>NexusAI - Elite Placement Portal</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@ body {
   overflow-x: hidden;
 }
 
-/* SIDEBAR SYSTEM */
+/* SIDEBAR */
 .sidebar {
   width: 260px;
   background: var(--sidebar-bg);
@@ -83,7 +83,6 @@ body {
   background: rgba(112, 0, 255, 0.18);
 }
 
-/* USER PROFILE BADGE LOWER SIDEBAR */
 .user-badge {
   margin-top: auto;
   background: rgba(255,255,255,0.02);
@@ -97,7 +96,7 @@ body {
 .user-info-text { font-size: 0.85rem; font-weight: 700; }
 .streak-counter { color: var(--accent-orange); font-size: 0.75rem; font-weight: 500; }
 
-/* MAIN FRAME CONTAINER VIEWPORTS */
+/* MAIN FRAME PANELS */
 .main-content {
   margin-left: 260px;
   flex: 1;
@@ -113,7 +112,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* SECTION 1: DASHBOARD METRIC GRID & QUICK START */
+/* METRICS DISPLAY */
 .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
 .m-card { background: var(--card-bg); border-radius: 12px; padding: 1.5rem; text-align: center; border: 1px solid rgba(255,255,255,0.02); }
 .m-val { font-size: 2rem; font-weight: 800; margin-top: 0.3rem; }
@@ -127,13 +126,12 @@ body {
 .quick-box:hover { transform: translateY(-3px); background: var(--card-hover); }
 .qb-title { font-weight: 700; margin-top: 0.8rem; font-size: 0.95rem; }
 
-/* COMPONENT DECORATIVE MATRIX BORDERS */
 .border-hr { border-bottom: 3px solid var(--accent-orange); }
 .border-tech { border-bottom: 3px solid var(--accent-blue); }
 .border-code { border-bottom: 3px solid var(--accent-teal); }
 .border-mgr { border-bottom: 3px solid #ff3333; }
 
-/* CONFIGURATION STYLING SHARDS */
+/* LAYOUT CONFIGURATION PANELS */
 .config-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
 .config-panel-box { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.02); }
 .panel-lbl { font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; margin-bottom: 0.8rem; }
@@ -148,7 +146,6 @@ body {
 }
 .pill-button.active-pill { background: var(--accent-purple); color: white; border-color: var(--accent-purple); }
 
-/* SYSTEM SUBMIT ACTION PILLS */
 .action-banner-btn {
   width: 100%; background: linear-gradient(90deg, #5b00e0, var(--accent-purple));
   color: white; border: none; padding: 1.1rem; border-radius: 10px; font-weight: 700;
@@ -156,22 +153,104 @@ body {
 }
 .action-banner-btn:hover { opacity: 0.95; transform: translateY(-1px); }
 
-/* SECTION 3: RESUME INPUT CONTAINER */
 .resume-textarea-field {
   width: 100%; background: var(--card-bg); border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px; padding: 1.2rem; color: white; min-height: 180px; font-family: inherit;
   outline: none; font-size: 0.95rem; margin-bottom: 1.5rem; resize: vertical;
 }
-.resume-textarea-field:focus { border-color: var(--accent-purple); }
 
-/* TERMINAL SIMULATION CORE HUD */
+/* INTERVIEW TERMINAL SIMULATION ENGINE */
 .live-hud-terminal { background: #091422; border: 1px solid rgba(0, 230, 180, 0.1); border-radius: 14px; padding: 2rem; margin-top: 1.5rem; }
-.hud-title-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1.2rem; }
+.hud-title-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.8rem; margin-bottom: 1.2rem; }
 .badge-counter { background: rgba(0, 230, 180, 0.1); color: var(--accent-teal); padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 1rem; }
 .prompt-bubble { background: #050d14; border-left: 4px solid var(--accent-teal); padding: 1.2rem; border-radius: 4px; font-size: 1rem; line-height: 1.5; margin-bottom: 1.5rem; }
-.terminal-textarea { width: 100%; background: #0c1a2b; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; color: white; min-height: 120px; font-family: inherit; margin-bottom: 1.2rem; outline: none; }
+.terminal-textarea { width: 100%; background: #0c1a2b; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; color: white; min-height: 130px; font-family: inherit; margin-bottom: 1.2rem; outline: none; transition: all 0.25s ease; font-size: 1rem; line-height: 1.5; }
 
-/* APTITUDE OPTION SELECTION ROW BLOCK */
+/* PREMIUM CONDITIONAL HEADHUNTER RECRUITER REPORT */
+.recruiter-panel {
+  background: linear-gradient(135deg, #0a1f33 0%, #061524 100%);
+  border: 1px solid rgba(0, 194, 255, 0.25);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+}
+.recruiter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+.recruiter-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.recruiter-decision-badge {
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.decision-pass { background: rgba(0, 230, 180, 0.15); color: var(--accent-teal); border: 1px solid var(--accent-teal); }
+.decision-warn { background: rgba(255, 122, 0, 0.15); color: var(--accent-orange); border: 1px solid var(--accent-orange); }
+
+.recruiter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.recruiter-stat-card {
+  background: rgba(5, 13, 20, 0.6);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.recruiter-stat-card label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.recruiter-stat-card div {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.recruiter-narrative-box {
+  background: rgba(5, 13, 20, 0.4);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.recruiter-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+.recruiter-bullets li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.recruiter-bullets li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  color: var(--accent-orange);
+}
+
+/* APTITUDE OPTION LAYERS */
 .aptitude-option-card {
   background: var(--card-bg); border: 1px solid rgba(255,255,255,0.06);
   border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: 0.6rem; cursor: pointer;
@@ -180,6 +259,50 @@ body {
 .aptitude-option-card:hover { background: var(--card-hover); border-color: rgba(255,255,255,0.15); }
 .aptitude-option-card.selected-option { background: rgba(112, 0, 255, 0.15); border-color: var(--accent-purple); }
 .option-index-bubble { background: rgba(255,255,255,0.05); width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem; font-weight: 700; }
+
+/* AUDIO ANIMATIONS */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes recording-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 122, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 0, 122, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 122, 0); }
+}
+.voice-btn-active {
+  animation: recording-pulse 1.5s infinite !important;
+  background: rgba(255, 0, 122, 0.25) !important;
+  border-color: var(--accent-pink) !important;
+  color: #fff !important;
+}
+.blink-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-pink);
+  border-radius: 50%;
+  display: inline-block;
+  animation: terminal-blink 1s infinite;
+}
+.voice-btn-base {
+  background: rgba(112, 0, 255, 0.1);
+  border: 1px solid rgba(112, 0, 255, 0.4);
+  color: var(--text-muted);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.25s ease;
+}
+.voice-btn-base:hover {
+  background: rgba(112, 0, 255, 0.2);
+  border-color: var(--accent-purple);
+  color: var(--text-main);
+}
 </style>
 </head>
 <body>
@@ -227,13 +350,31 @@ body {
     <div id="stage-mock" class="view-stage">
       <div id="mock-config-view">
         <h1 class="section-headline">Configure Your Interview</h1>
+        
         <div class="config-grid">
-          <div class="config-panel-box"><div class="panel-lbl">🏢 Target Company</div>
-            <select class="select-menu" id="mockCompany" onchange="syncMockLaunchText()"><option value="Google">Google</option><option value="Amazon">Amazon</option><option value="EY">EY (Ernst & Young)</option></select>
+          <div class="config-panel-box">
+            <div class="panel-lbl">🏢 Target Company</div>
+            <select class="select-menu" id="mockCompany" onchange="syncMockLaunchText()">
+              <option value="EY (Ernst & Young)">EY (Ernst & Young)</option>
+              <option value="Google">Google</option>
+              <option value="Microsoft">Microsoft</option>
+              <option value="Amazon">Amazon</option>
+              <option value="Deloitte">Deloitte</option>
+              <option value="TCS">TCS</option>
+            </select>
           </div>
-          <div class="config-panel-box"><div class="panel-lbl">💼 Role</div>
-            <select class="select-menu" id="mockRole" onchange="syncMockLaunchText()"><option value="Software Engineer">Software Engineer</option><option value="Cloud Specialist">Cloud Specialist</option></select>
+
+          <div class="config-panel-box">
+            <div class="panel-lbl">💼 Role</div>
+            <select class="select-menu" id="mockRole" onchange="syncMockLaunchText()">
+              <option value="Global Immigration Analyst">Global Immigration Analyst</option>
+              <option value="Software Engineer">Software Engineer</option>
+              <option value="Cloud Architect">Cloud Architect</option>
+              <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+              <option value="Python Developer">Python Developer</option>
+            </select>
           </div>
+
           <div class="config-panel-box" style="grid-column: span 2;"><div class="panel-lbl">🎯 Interview Round</div>
             <div class="pill-cluster" id="mockRoundContainer">
               <div class="pill-button active-pill" onclick="setMockActiveRoundChip(this, 'hr')">👤 HR Round</div>
@@ -243,16 +384,34 @@ body {
             </div>
           </div>
         </div>
-        <button class="action-banner-btn" id="mockLaunchBtn" onclick="runMockLivePipeline()">⚡ Start Interview — Google · Software Engineer</button>
+        <button class="action-banner-btn" id="mockLaunchBtn" onclick="runMockLivePipeline()">⚡ Start Interview — EY (Ernst & Young) · Global Immigration Analyst</button>
       </div>
 
       <div id="mock-runtime-view" style="display: none;">
         <div class="live-hud-terminal">
-          <div class="hud-title-row"><h3 style="color: var(--accent-teal);" id="mockHudHeader">🖥️ Live Evaluation Matrix</h3><span style="font-size: 0.8rem; color: var(--text-muted); font-weight: bold;">MOCK ENVIRONMENT</span></div>
-          <div class="badge-counter" id="mockCounterDisplay">Question 1 of 10</div>
-          <div class="prompt-bubble" id="mockPromptField">Loading query parameter fields...</div>
-          <textarea class="terminal-textarea" id="mockUserResponse" placeholder="Type out your structured response parameters here..."></textarea>
-          <div style="display: flex; justify-content: space-between;"><button style="background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer;" onclick="abortMockSession()">✕ Quit</button><button class="action-banner-btn" style="width: auto; padding: 0.6rem 2rem;" id="mockNextBtn" onclick="advanceMockStep()">Submit & Next Question →</button></div>
+          <div class="hud-title-row"><h3 style="color: var(--accent-teal);" id="mockHudHeader">🖥️ Live Evaluation Matrix</h3><span style="font-size: 0.8rem; color: var(--text-muted); font-weight: bold;">PANEL HUD ACTIVE</span></div>
+          
+          <div id="mock-question-panel">
+            <div class="badge-counter" id="mockCounterDisplay">Question 1 of 5</div>
+            <div class="prompt-bubble" id="mockPromptField">Loading query parameter fields...</div>
+            <textarea class="terminal-textarea" id="mockUserResponse" placeholder="Speak your answer clearly. Text area updates continuously without length bounds..."></textarea>
+            
+            <div style="margin-top: -0.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+              <button id="voiceBtnMock" type="button" class="voice-btn-base" onclick="toggleVoiceInput('mockUserResponse', 'voiceBtnMock')">
+                🎤 Start Voice Input
+              </button>
+              <span id="voiceStatusMock" style="font-size: 0.8rem; color: var(--text-muted); display: none; align-items: center; gap: 0.5rem;">
+                <span class="blink-dot"></span> STREAMING AUDIO INTERIM DATA REAL-TIME...
+              </span>
+            </div>
+          </div>
+
+          <div id="mock-feedback-container" style="display: none;"></div>
+
+          <div style="display: flex; justify-content: space-between;">
+            <button style="background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer;" onclick="abortMockSession()">✕ Quit</button>
+            <button class="action-banner-btn" style="width: auto; padding: 0.6rem 2rem;" id="mockNextBtn" onclick="handleMockAction()">Verify & Evaluate Response →</button>
+          </div>
         </div>
       </div>
     </div>
@@ -269,10 +428,28 @@ body {
       <div id="resume-runtime-view" style="display: none;">
         <div class="live-hud-terminal">
           <div class="hud-title-row"><h3 style="color: var(--accent-blue);">📄 Profile Context Engine Active</h3><span style="font-size: 0.8rem; color: var(--text-muted); font-weight: bold;">RESUME DATA STREAM</span></div>
-          <div class="badge-counter" id="resumeCounterDisplay">Question 1 of 10</div>
-          <div class="prompt-bubble" id="resumePromptField">Analyzing structures...</div>
-          <textarea class="terminal-textarea" id="resumeUserResponse" placeholder="Construct your technical proof matrix verification statement..."></textarea>
-          <div style="display: flex; justify-content: space-between;"><button style="background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer;" onclick="abortResumeSession()">✕ Quit</button><button class="action-banner-btn" style="width: auto; padding: 0.6rem 2rem;" id="resumeNextBtn" onclick="advanceResumeStep()">Submit & Next Question →</button></div>
+          
+          <div id="resume-question-panel">
+            <div class="badge-counter" id="resumeCounterDisplay">Question 1 of 5</div>
+            <div class="prompt-bubble" id="resumePromptField">Analyzing structures...</div>
+            <textarea class="terminal-textarea" id="resumeUserResponse" placeholder="Speak your answer clearly. Text area updates continuously without length bounds..."></textarea>
+            
+            <div style="margin-top: -0.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+              <button id="voiceBtnResume" type="button" class="voice-btn-base" onclick="toggleVoiceInput('resumeUserResponse', 'voiceBtnResume')">
+                🎤 Start Voice Input
+              </button>
+              <span id="voiceStatusResume" style="font-size: 0.8rem; color: var(--text-muted); display: none; align-items: center; gap: 0.5rem;">
+                <span class="blink-dot"></span> STREAMING AUDIO INTERIM DATA REAL-TIME...
+              </span>
+            </div>
+          </div>
+
+          <div id="resume-feedback-container" style="display: none;"></div>
+
+          <div style="display: flex; justify-content: space-between;">
+            <button style="background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer;" onclick="abortResumeSession()">✕ Quit</button>
+            <button class="action-banner-btn" style="width: auto; padding: 0.6rem 2rem;" id="resumeNextBtn" onclick="handleResumeAction()">Verify & Evaluate Response →</button>
+          </div>
         </div>
       </div>
     </div>
@@ -290,8 +467,7 @@ body {
           <div class="badge-counter" id="aptCounterDisplay">Question 1 of 10</div>
           <div class="prompt-bubble" id="aptPromptField">Extracting quantitative parameter structures...</div>
           
-          <div id="aptOptionsBlock">
-            </div>
+          <div id="aptOptionsBlock"></div>
 
           <div style="display: flex; justify-content: space-between; margin-top: 1.5rem;"><button style="background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer;" onclick="abortAptSession()">✕ Quit</button><button class="action-banner-btn" style="width: auto; padding: 0.6rem 2rem;" id="aptNextBtn" onclick="advanceAptStep()">Submit & Next Question →</button></div>
         </div>
@@ -301,114 +477,78 @@ body {
   </main>
 
   <script>
-    // System Master Matrix Array Configurations
     const interviewDataBank = {
       hr: [
         "Tell me about yourself and your professional focus area.",
         "Why do you want to join our company, and how do your technical specializations align with us?",
-        "Describe a time when you had to manage a heavy workload or academic pressure. How did you plan out your execution targets?",
+        "Describe a time when you had to manage a heavy workload or academic pressure.",
         "What are your greatest professional strengths, and what is one area you are actively working to improve?",
-        "Tell me about a time you had a disagreement or conflict with a teammate during a project execution framework. How did you resolve it?",
-        "Where do you see yourself professionally in the next 5 years?",
-        "Describe a major failure or setback you experienced during an engineering or development milestone. How did you recover?",
-        "Why should we choose to onboard you over other candidate streams applying for this track?",
-        "How do you stay motivated and avoid burning out when working under tightly compressed release sprint windows?",
-        "Do you have any questions for us regarding the corporate structure or technological tracks?"
+        "Tell me about a time you had a disagreement or conflict with a teammate during a project framework. How did you resolve it?"
       ],
       technical: [
         "What is the difference between a process and a thread in execution environments?",
         "Explain the concept of virtual memory and how paging helps memory segmentation maps.",
-        "Your system logs telemetry parameters inside a custom script wrapper. If a malicious tracking string executes an injection query to pull architecture files from your system, what logging steps would you use to trace it?",
         "Explain the differences between symmetric and asymmetric encryption models, and give a standard use-case for each.",
         "What is an Intrusion Detection System (IDS), and how do signature-based detection systems compare against anomaly-based platforms?",
-        "How does the TCP three-way handshake function work to establish a reliable transport socket map?",
-        "What are the core pillars of Object-Oriented Programming (OOP), and how does polymorphism function dynamically?",
-        "Explain what a database transaction normalization strategy does, and define ACID compliance parameters.",
-        "What are honeypots in a network infrastructure framework, and how do they aid security analysts in tracking vector definitions?",
-        "What is the role of an Identity and Access Management (IAM) lifecycle schema inside cloud service platforms?"
+        "How does the TCP three-way handshake function work to establish a reliable transport socket map?"
       ],
       coding: [
         "Write a clean Python logic function that opens an incoming request stream, parses a payload dictionary, and drops any entries containing missing data fields.",
         "Implement a structural algorithm to find the single non-repeating integer value inside an unsorted primitive array map.",
         "Write a script block to reverse a linked list node sequence without generating extra allocation layers.",
-        "Construct an efficient optimization algorithm that checks if a string sequence reads identically backwards and forwards, eliminating whitespace boundaries.",
-        "Write an execution loop to identify the lowest mutual component parameter inside two standalone integer sequence arrays.",
-        "Build a recursive sorting subroutine that structures a tree sequence path array back into perfect ascending ordering constraints.",
-        "Write a clean program block demonstrating how exception propagation pathways isolate and block operational runtime crashes.",
-        "Design a dictionary-parsing algorithm to tally structural pattern occurrences inside a raw paragraph string stream.",
-        "Write a sorting routine that shifts all zero allocation variables inside an array map to the termination boundary without altering sequence alignments.",
-        "Implement a binary search optimization pattern that safely pinpoints variable records inside highly organized sequence frameworks."
+        "Construct an efficient optimization algorithm that checks if a string sequence reads identically backwards and forwards."
       ],
       managerial: [
-        "If you notice a team member on a deployment sprint is consistently falling short on their core tasks, breaking the main software builds, how would you approach them to resolve the bottleneck?",
+        "If you notice a team member on a deployment sprint is consistently falling short on their core tasks, breaking the main software builds, how would you approach them?",
         "How do you manage project scope shifts when client stakeholders request structural changes halfway through an active development lifecycle?",
-        "Describe how you would handle an operations conflict where two technical leads demand completely opposite system design patterns for the same database asset.",
-        "How do you delegate critical tasks among engineers with wildly contrasting skill levels and domain experiences?",
-        "If your project team falls significantly behind schedule due to an unexpected infrastructure failure, what steps do you take to fix the timeline?",
-        "How do you deliver constructive, critical performance feedback to a peer without damaging team collaboration or morale?",
-        "Imagine an engineering lead completely rejects your architectural design proposal. How do you handle the situation to find common ground?",
-        "How do you prioritize project targets when multiple critical system components crash or require engineering fixes at the exact same time?",
-        "What metrics and parameters do you use to evaluate whether a completed development sprint was truly successful?",
-        "How do you introduce new tools or automated framework paradigms to a conservative team that prefers using legacy methods?"
+        "Describe how you would handle an operations conflict where two technical leads demand completely opposite system design patterns."
       ],
       resume: [
-        "Based on your resume, how did you implement secure, tamper-evident system logging structures inside your internship testing nodes?",
-        "Can you explain your experience in constructing secure local web instances or automation toolkits mentioned in your background summary?",
-        "Describe a technical challenge you encountered when handling parameter attempts or injection tracking structures in your software projects.",
-        "How do you configure deceptive monitoring loops or honeypot architectures to block external vulnerability scanners?",
-        "Your profile highlights object mapping. Can you describe how you isolate functional runtime component parameters?",
-        "Explain your workflow strategy for ensuring that deployment scripts scale safely within cloud containerized arrays.",
-        "How did you parse telemetry variables or log strings cleanly without triggering data parsing exceptions inside your code implementations?",
-        "Describe a situation where your system configuration directly prevented unauthorized or unauthenticated parameter access vectors.",
-        "How do you align multi-tier identity frameworks to ensure strict access controls over structural tracking repositories?",
-        "What methods do you use to evaluate code version performance jumps when advancing release milestones?"
+        "Based on your resume background data, how did you structure and test your local code environments?",
+        "Can you describe your experience handling system scripting, toolkits, or telemetry parsers listed in your background info?",
+        "Describe a technical challenge you encountered when handling script parameters or application testing metrics."
       ],
       aptitude: [
         { q: "If a train travels 60 km in 45 minutes, what is its speed in km/h?", o: ["80 km/h", "75 km/h", "90 km/h", "70 km/h"], a: 0 },
-        { q: "A script scans system logs every 4 minutes, and a secondary backup script runs every 6 minutes. If both start at 12:00 PM, how many total times will they execute together before 4:00 PM?", o: ["20 times", "21 times", "16 times", "17 times"], a: 1 },
-        { q: "If a data pipeline transfers blocks at 12 MB per second, how many minutes will it take to stream a file totaling 7.2 gigabytes (7,200 MB)?", o: ["8 minutes", "10 minutes", "12 minutes", "15 minutes"], a: 1 },
-        { q: "Server A finishes a database task in 3 hours, and Server B completes it in 6 hours. Working concurrently, how long does it take?", o: ["2 hours", "2.5 hours", "4 hours", "1.5 hours"], a: 0 },
-        { q: "Inside a department, the ratio of analysts to engineers is 5:3. If there are 24 engineers on site, what is the number of analysts?", o: ["35 analysts", "40 analysts", "45 analysts", "30 analysts"], a: 1 },
-        { q: "A switch handles data frames with a baseline drop rate parameter of 2%. Out of 50,000 parsed packets, how many frames fail?", o: ["1,000 frames", "500 frames", "2,000 frames", "100 frames"], a: 0 },
-        { q: "An engineering team updates code modules. If Version 1 contains 150 scripts and Version 2 increases that by 30%, how many total modules exist now?", o: ["180 scripts", "195 scripts", "200 scripts", "210 scripts"], a: 1 },
-        { q: "A backup storage array capacity metric doubles daily. If it hits absolute operational limits on Day 30, on which day was it exactly half full?", o: ["Day 15", "Day 29", "Day 28", "Day 25"], a: 1 },
-        { q: "The average rating across 4 testing nodes is 82%. If a fifth node joins the map and shifts the mean validation rating to 85%, what did the fifth node log?", o: ["97%", "92%", "88%", "95%"], a: 0 },
-        { q: "An operations setup cuts transit latencies down by exactly 25%. If the default latency was 120 milliseconds, what is the optimized speed metric?", o: ["80 ms", "90 ms", "95 ms", "100 ms"], a: 1 }
+        { q: "Server A finishes a database task in 3 hours, and Server B completes it in 6 hours. Working concurrently, how long does it take them to finish?", o: ["2 hours", "2.5 hours", "4 hours", "1.5 hours"], a: 0 },
+        { q: "Inside a department, the ratio of analysts to engineers is 5:3. If there are 24 engineers on site, what is the total number of analysts?", o: ["35 analysts", "40 analysts", "45 analysts", "30 analysts"], a: 1 },
+        { q: "A secure storage array experiences a price markdown of 20%, followed by an additional promotional markdown of 10%. What is the total aggregate discount percentage?", o: ["30%", "28%", "25%", "32%"], a: 1 },
+        { q: "A cloud logging directory contains 4 critical alerts, 5 warning alerts, and 3 informational alerts. If an administrator opens 2 alerts at random without replacement, what is the exact probability that both are critical alerts?", o: ["1/11", "2/11", "4/33", "1/22"], a: 0 },
+        { q: "If 12 security analysts can audit 48 cloud code containers in 6 days, how many days will it take 8 security analysts to audit 32 cloud code containers?", o: ["4 days", "8 days", "6 days", "9 days"], a: 2 },
+        { q: "A network routing cycle updates its telemetry tables every 24 minutes, while a second asset manager updates every 36 minutes. If they sync concurrently at 9:00 AM, at what time will they execute their very next overlapping synchronous update?", o: ["9:48 AM", "10:12 AM", "10:30 AM", "11:00 AM"], a: 1 },
+        { q: "An algorithmic array sequence is configured as follows: 4, 9, 20, 43, 90, (...). Identify the trailing element integer that correctly completes the programmatic growth logic.", o: ["180", "185", "183", "196"], a: 2 },
+        { q: "The average processing latency of 5 microservices is 45ms. When a 6th legacy microservice container is connected to the pool cluster, the new aggregate latency climbs to 52ms. What is the standalone latency of the 6th container?", o: ["87ms", "74ms", "92ms", "65ms"], a: 0 },
+        { q: "A validation rule detects that a certain security token length string is valid if its square decreased by 15 equals twice its length. What positive integer scalar satisfies this constraint logic?", o: ["5", "3", "6", "4"], a: 0 }
       ]
     };
 
     let activeTrack = 'hr';
     let currentStepIndex = 0;
     let selectedAptOption = null;
+    let speechRecognizer = null;
+    let isShowingFeedbackState = false;
 
-    // INTERFACE VIEWPORT NAVIGATION CONTROLLER SWITCH
     function switchMainViewStage(stageKey, preselectedSubtrack = null) {
-      // Clear out active state classes from all navigation sidebar items
+      if (speechRecognizer) speechRecognizer.stop();
       const routes = ['dash', 'mock', 'resume', 'apt'];
-      routes.forEach(r => document.getElementById(`nav-${r}`).classList.remove('active'));
-      
-      // Clear visibility states on display panels
-      routes.forEach(r => document.getElementById(`stage-${r}`).classList.remove('active-stage'));
-
-      // Engage targets
+      routes.forEach(r => {
+        document.getElementById(`nav-${r}`).classList.remove('active');
+        document.getElementById(`stage-${r}`).classList.remove('active-stage');
+      });
       document.getElementById(`nav-${stageKey}`).classList.add('active');
       document.getElementById(`stage-${stageKey}`).classList.add('active-stage');
 
-      // If bypassing through the dashboard quick start parameters
       if (preselectedSubtrack) {
         activeTrack = preselectedSubtrack;
-        // Sync active pill classes in setup screen
         const pills = document.getElementById('mockRoundContainer').children;
-        for (let p of pills) p.classList.remove('active-pill');
-        // Find corresponding trigger chip and activate it
         for (let p of pills) {
+          p.classList.remove('active-pill');
           if (p.innerText.toLowerCase().includes(preselectedSubtrack)) p.classList.add('active-pill');
         }
         syncMockLaunchText();
       }
     }
 
-    // MOCK CONTROLS ENGINE HOOKS
     function setMockActiveRoundChip(element, roundKey) {
       const parent = element.parentElement.children;
       for (let child of parent) child.classList.remove('active-pill');
@@ -423,14 +563,17 @@ body {
       document.getElementById('mockLaunchBtn').innerText = `⚡ Start Interview — ${comp} · ${role}`;
     }
 
+    // MOCK CONTROLLER
     function runMockLivePipeline() {
       currentStepIndex = 0;
+      isShowingFeedbackState = false;
       document.getElementById('mock-config-view').style.display = 'none';
       document.getElementById('mock-runtime-view').style.display = 'block';
+      document.getElementById('mock-question-panel').style.display = 'block';
+      document.getElementById('mock-feedback-container').style.display = 'none';
       
       const comp = document.getElementById('mockCompany').value;
-      document.getElementById('mockHudHeader').innerText = `🖥️ ${comp} Terminal Assessment Pipeline`;
-      document.getElementById('mockNextBtn').innerText = "Submit & Next Question →";
+      document.getElementById('mockHudHeader').innerText = `🖥️ ${comp} Assessment Terminal`;
       renderMockQuestionStep();
     }
 
@@ -439,40 +582,115 @@ body {
       document.getElementById('mockCounterDisplay').innerText = `Question ${currentStepIndex + 1} of ${list.length}`;
       document.getElementById('mockPromptField').innerText = `"${list[currentStepIndex]}"`;
       document.getElementById('mockUserResponse').value = "";
-
-      if (currentStepIndex === list.length - 1) {
-        document.getElementById('mockNextBtn').innerText = "Submit Final Interview Matrix 🏁";
-      }
+      document.getElementById('mockNextBtn').innerText = "Verify & Evaluate Response →";
     }
 
-    function advanceMockStep() {
-      const text = document.getElementById('mockUserResponse').value.trim();
-      if (!text) { alert("Please input your response before advancing validation fields."); return; }
+    // TRUE RECRUITER NARRATIVE RE-ENGINEERING
+    function generateRecruiterFeedback(text) {
+      const wordCount = text.split(/\s+/).filter(Boolean).length;
+      
+      let techRating = "Strong Context Mapping";
+      let commRating = "Articulate & Direct";
+      let decisionText = "SHORTLISTED FOR TEAM ROUND";
+      let badgeClass = "decision-pass";
+      let narrative = "";
+      let bulletPoints = [];
 
-      const list = interviewDataBank[activeTrack];
-      if (currentStepIndex < list.length - 1) {
-        currentStepIndex++;
-        renderMockQuestionStep();
+      if (wordCount < 15) {
+        techRating = "Needs Structural Depth";
+        commRating = "Too Brief / Monosyllabic";
+        decisionText = "HOLD / RE-EVALUATE RUN";
+        badgeClass = "decision-warn";
+        narrative = "The applicant's response structure is too brief to gauge corporate compatibility or project deployment capacity. Recruiters look for complete frameworks like the STAR method (Situation, Task, Action, Result).";
+        bulletPoints = [
+          "Elongate answer architecture by providing precise environmental examples.",
+          "Avoid quick conceptual summaries; break down exactly what tools or frameworks you operated.",
+          "Target at least 3-4 dense informational sentences to signal domain comfort."
+        ];
+      } else if (wordCount >= 15 && wordCount < 50) {
+        narrative = "Solid baseline performance. The candidate addresses the explicit prompt cleanly, communicates structure well, and maps corporate terminology without excessive narrative padding.";
+        bulletPoints = [
+          "Good structural articulation; answers are straightforward and easy for standard screening teams to track.",
+          "Good keyword density, matching the technical parameters expected for entry roles.",
+          "Improvement vector: Connect these core achievements to clear, quantifiable metrics (e.g., performance speeds or team size context)."
+        ];
       } else {
-        alert("Success! Your 10 answers have been logged into telemetry diagnostics profile stores.");
-        abortMockSession();
+        techRating = "Exceptional Domain Coverage";
+        narrative = "Excellent high-fidelity execution. The response mirrors senior placement standards, combining deep technical context with a confident delivery roadmap. Demonstrates project fluency.";
+        bulletPoints = [
+          "Comprehensive answer length demonstrates clear subject-matter ownership and strong articulation habits.",
+          "Excellent integration of structural dependencies, linking background actions cleanly to system outcomes.",
+          "High corporate readiness indexing across candidate stream parameters."
+        ];
+      }
+
+      return `
+        <div class="recruiter-panel">
+          <div class="recruiter-header">
+            <div class="recruiter-title">💼 Recruiter Panel Evaluation Report</div>
+            <span class="recruiter-decision-badge ${badgeClass}">${decisionText}</span>
+          </div>
+          <div class="recruiter-grid">
+            <div class="recruiter-stat-card"><label>Technical Depth Index</label><div>${techRating}</div></div>
+            <div class="recruiter-stat-card"><label>Communication Style Profile</label><div>${commRating}</div></div>
+          </div>
+          <div class="recruiter-narrative-box">
+            <strong>Recruiter Notes:</strong> ${narrative}
+          </div>
+          <div style="font-size: 0.85rem; font-weight:700; color: var(--accent-orange); margin-bottom: 0.5rem; text-transform:uppercase;">Panel Action Plan Checklist:</div>
+          <ul class="recruiter-bullets">
+            ${bulletPoints.map(b => `<li>${b}</li>`).join('')}
+          </ul>
+        </div>`;
+    }
+
+    function handleMockAction() {
+      const list = interviewDataBank[activeTrack];
+      
+      if (!isShowingFeedbackState) {
+        const text = document.getElementById('mockUserResponse').value.trim();
+        if (!text) { alert("Please input an answer stream using your microphone or keyboard first."); return; }
+        if (speechRecognizer) speechRecognizer.stop();
+
+        document.getElementById('mock-question-panel').style.display = 'none';
+        const container = document.getElementById('mock-feedback-container');
+        container.innerHTML = generateRecruiterFeedback(text);
+        container.style.display = 'block';
+        
+        document.getElementById('mockNextBtn').innerText = (currentStepIndex < list.length - 1) ? "Advance to Next Interview Stage →" : "Finish Interview 🏁";
+        isShowingFeedbackState = true;
+      } else {
+        isShowingFeedbackState = false;
+        document.getElementById('mock-feedback-container').style.display = 'none';
+        document.getElementById('mock-question-panel').style.display = 'block';
+        
+        if (currentStepIndex < list.length - 1) {
+          currentStepIndex++;
+          renderMockQuestionStep();
+        } else {
+          alert("Success! Your complete interview matrix metrics have been saved to profile analytics summaries.");
+          abortMockSession();
+        }
       }
     }
 
     function abortMockSession() {
+      if (speechRecognizer) speechRecognizer.stop();
       document.getElementById('mock-runtime-view').style.display = 'none';
       document.getElementById('mock-config-view').style.display = 'block';
     }
 
-    // RESUME EVALUATION RUNTIME MECHANICS 
+    // RESUME AI ENGINE
     function runResumeInterviewEngine() {
       const resumeText = document.getElementById('resumePasteInput').value.trim();
-      if (!resumeText) { alert("Please insert your text block elements inside the resume workspace console."); return; }
+      if (!resumeText) { alert("Please paste your text structures into workspace areas first."); return; }
 
       currentStepIndex = 0;
+      isShowingFeedbackState = false;
       document.getElementById('resume-config-view').style.display = 'none';
       document.getElementById('resume-runtime-view').style.display = 'block';
-      document.getElementById('resumeNextBtn').innerText = "Submit & Next Question →";
+      document.getElementById('resume-question-panel').style.display = 'block';
+      document.getElementById('resume-feedback-container').style.display = 'none';
       renderResumeQuestionStep();
     }
 
@@ -481,32 +699,46 @@ body {
       document.getElementById('resumeCounterDisplay').innerText = `Question ${currentStepIndex + 1} of ${list.length}`;
       document.getElementById('resumePromptField').innerText = `"${list[currentStepIndex]}"`;
       document.getElementById('resumeUserResponse').value = "";
-
-      if (currentStepIndex === list.length - 1) {
-        document.getElementById('resumeNextBtn').innerText = "Submit Final Interview Matrix 🏁";
-      }
+      document.getElementById('resumeNextBtn').innerText = "Verify & Evaluate Response →";
     }
 
-    function advanceResumeStep() {
-      const text = document.getElementById('resumeUserResponse').value.trim();
-      if (!text) { alert("Please input your response before advancing validation fields."); return; }
-
+    function handleResumeAction() {
       const list = interviewDataBank['resume'];
-      if (currentStepIndex < list.length - 1) {
-        currentStepIndex++;
-        renderResumeQuestionStep();
+
+      if (!isShowingFeedbackState) {
+        const text = document.getElementById('resumeUserResponse').value.trim();
+        if (!text) { alert("Please input an answer stream using your microphone or keyboard first."); return; }
+        if (speechRecognizer) speechRecognizer.stop();
+
+        document.getElementById('resume-question-panel').style.display = 'none';
+        const container = document.getElementById('resume-feedback-container');
+        container.innerHTML = generateRecruiterFeedback(text);
+        container.style.display = 'block';
+        
+        document.getElementById('resumeNextBtn').innerText = (currentStepIndex < list.length - 1) ? "Advance to Next Interview Stage →" : "Finish Evaluation 🏁";
+        isShowingFeedbackState = true;
       } else {
-        alert("Profile review tracking complete! Dynamic response sets logged.");
-        abortResumeSession();
+        isShowingFeedbackState = false;
+        document.getElementById('resume-feedback-container').style.display = 'none';
+        document.getElementById('resume-question-panel').style.display = 'block';
+        
+        if (currentStepIndex < list.length - 1) {
+          currentStepIndex++;
+          renderResumeQuestionStep();
+        } else {
+          alert("Resume profile validation pipeline finalized.");
+          abortResumeSession();
+        }
       }
     }
 
     function abortResumeSession() {
+      if (speechRecognizer) speechRecognizer.stop();
       document.getElementById('resume-runtime-view').style.display = 'none';
       document.getElementById('resume-config-view').style.display = 'block';
     }
 
-    // APTITUDE ASSESSMENT LAYER CONFIGURATIONS
+    // APTITUDE PRACTICE CODES
     function runAptitudeLiveEngine() {
       currentStepIndex = 0;
       document.getElementById('apt-config-view').style.display = 'none';
@@ -524,7 +756,7 @@ body {
       
       selectedAptOption = null;
       const optionsBox = document.getElementById('aptOptionsBlock');
-      optionsBox.innerHTML = ""; // clean layout wrapper layers
+      optionsBox.innerHTML = ""; 
 
       const labelPrefixes = ["A", "B", "C", "D"];
       targetObj.o.forEach((optText, index) => {
@@ -546,14 +778,14 @@ body {
     }
 
     function advanceAptStep() {
-      if (selectedAptOption === null) { alert("Please isolate a target parameter choice chip block option before moving forward."); return; }
+      if (selectedAptOption === null) { alert("Select an analytical option card first."); return; }
 
       const list = interviewDataBank['aptitude'];
       if (currentStepIndex < list.length - 1) {
         currentStepIndex++;
         renderAptQuestionStep();
       } else {
-        alert("Aptitude simulation session terminated successfully. Performance telemetry mapped cleanly.");
+        alert("Aptitude simulation session terminated successfully.");
         abortAptSession();
       }
     }
@@ -561,6 +793,76 @@ body {
     function abortAptSession() {
       document.getElementById('apt-runtime-view').style.display = 'none';
       document.getElementById('apt-config-view').style.display = 'block';
+    }
+
+    // UNLIMITED HIGH-SPEED STREAM SPEECH RECOGNITION PIPELINE
+    function toggleVoiceInput(textareaId, buttonId) {
+      const targetTextarea = document.getElementById(textareaId);
+      const targetButton = document.getElementById(buttonId);
+      const statusId = buttonId === 'voiceBtnMock' ? 'voiceStatusMock' : 'voiceStatusResume';
+      const targetStatus = document.getElementById(statusId);
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert("Web Speech API is not supported in this browser. Please use Google Chrome or Edge.");
+        return;
+      }
+
+      if (speechRecognizer) {
+        speechRecognizer.stop();
+        return;
+      }
+
+      speechRecognizer = new SpeechRecognition();
+      speechRecognizer.continuous = true;
+      speechRecognizer.interimResults = true; 
+      speechRecognizer.lang = 'en-US';
+
+      let finalizedSessionText = targetTextarea.value;
+
+      speechRecognizer.onstart = () => {
+        targetButton.innerHTML = `🛑 Stop Stream`;
+        targetButton.classList.add('voice-btn-active');
+        targetStatus.style.display = 'inline-flex';
+        targetTextarea.style.borderColor = 'var(--accent-pink)';
+        targetTextarea.style.boxShadow = '0 0 12px rgba(255, 0, 122, 0.2)';
+      };
+
+      speechRecognizer.onresult = (event) => {
+        let currentInterim = '';
+        let newlyFinalized = '';
+
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            newlyFinalized += event.results[i][0].transcript + ' ';
+          } else {
+            currentInterim += event.results[i][0].transcript;
+          }
+        }
+
+        if (newlyFinalized) {
+          finalizedSessionText = (finalizedSessionText + ' ' + newlyFinalized).replace(/\s+/g, ' ').trim();
+        }
+        
+        targetTextarea.value = (finalizedSessionText + ' ' + currentInterim).trim();
+        targetTextarea.scrollTop = targetTextarea.scrollHeight;
+      };
+
+      speechRecognizer.onerror = (event) => {
+        console.error("Speech Diagnostic Error Frame:", event.error);
+        if (event.error !== 'aborted') speechRecognizer.stop();
+      };
+
+      speechRecognizer.onend = () => {
+        targetButton.innerHTML = `🎤 Start Voice Input`;
+        targetButton.classList.remove('voice-btn-active');
+        targetStatus.style.display = 'none';
+        targetTextarea.style.borderColor = 'rgba(255,255,255,0.1)';
+        targetTextarea.style.boxShadow = 'none';
+        speechRecognizer = null;
+      };
+
+      speechRecognizer.start();
     }
   </script>
 </body>
