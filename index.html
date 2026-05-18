@@ -108,15 +108,7 @@ nav {
 /* FOOTER ARCHITECTURE */
 footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-family: var(--mono); font-size: 0.8rem; }
 
-@media(max-width:1024px) {
-  nav { padding: 1.2rem 2rem; }
-  .bento-grid { grid-template-columns: 1fr; }
-  .span-2 { grid-column: span 1; }
-  .hero h1 { font-size: 3.5rem; }
-  .live-stats { gap: 3rem; }
-  .wf-step::after { content: '↓'; bottom: -1.5rem; right: 50%; top: auto; }
-}
-  /* ==========================================================================
+/* ==========================================================================
    MOBILE & TABLET RESPONSIVE OPTIMIZER MATRIX
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -136,17 +128,22 @@ footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--bor
     display: none; /* Hides raw horizontal menu links to keep the phone screen clean */
   }
 
-  /* 3. Hero Layout Scaling */
+  /* 3. Hero Layout Scaling & Targeted Font Fix */
   .hero {
     padding: 8rem 1.5rem 4rem; /* Brings the content up slightly on mobile viewports */
     min-height: auto;
   }
   .hero h1 {
-    font-size: 3rem; /* Downscales massive typography to prevent letter overlapping */
-    line-height: 1.2;
+    font-size: 2.2rem !important; /* Forces the text to a compact size that stays within bounds */
+    line-height: 1.2 !important;  /* Gives clean vertical breathing room between words */
+    letter-spacing: -0.5px;       /* Subtly tightens wide letters like 'E' and 'g' */
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;        /* Safety protocol to prevent words from clipping the edge */
   }
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1rem !important;   /* Pulls the subheader line into a clean, readable mobile scale */
+    padding: 0 10px;
     margin-top: 1.2rem;
   }
   .hero-actions {
@@ -154,6 +151,7 @@ footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--bor
     width: 100%;
     max-width: 320px;
     gap: 12px;
+    margin-top: 2.5rem;
   }
   .hero-actions .btn {
     width: 100%; /* Makes buttons full-width for easy thumb-tapping */
@@ -174,6 +172,9 @@ footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--bor
   /* 5. Bento Grid Layout Flattening */
   .section {
     padding: 5rem 1.5rem; /* Tightens outer section spacing */
+  }
+  .section-header {
+    margin-bottom: 3rem;
   }
   .section-header h2 {
     font-size: 2.2rem;
