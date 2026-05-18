@@ -3,171 +3,230 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NEXUS Professional Placement Hub</title>
+<title>NEXUS - Next-Gen Career Placement & Prep Suite</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#050d12;
-  --bg2:#0a1620;
-  --teal:#00e6b4;
-  --amber:#f5a623;
-  --text:#e8f4f0;
-  --text2:#9bbab2;
-  --border2:rgba(0,230,180,0.15);
-  --display:'Syne',sans-serif;
-  --body:'DM Sans',sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  --bg: #03080c;
+  --bg-card: #071118;
+  --bg-card-hover: #0b1a24;
+  --teal: #00e6b4;
+  --teal-glow: rgba(0, 230, 180, 0.15);
+  --amber: #f5a623;
+  --purple: #8141f7;
+  --text: #e8f4f0;
+  --text-muted: #7e9fa1;
+  --border: rgba(0, 230, 180, 0.12);
+  --display: 'Syne', sans-serif;
+  --body: 'DM Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
 }
 
-*{ margin:0; padding:0; box-sizing:border-box; }
-body{ background:var(--bg); color:var(--text); font-family:var(--body); overflow-x:hidden; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { 
+  background: var(--bg); 
+  color: var(--text); 
+  font-family: var(--body); 
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 230, 180, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(129, 65, 247, 0.04) 0%, transparent 40%);
+}
 
 /* NAVBAR */
-nav{
-  position:fixed; top:0; left:0; right:0; z-index:1000;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:1.2rem 4rem; background:rgba(5,13,18,0.85); backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(0,230,180,0.1);
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 6rem; background: rgba(3, 8, 12, 0.75); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
 }
-.logo{ font-family:var(--display); font-size:1.4rem; font-weight:800; color:var(--text); }
-.logo span{ color:var(--teal); }
+.logo { font-family: var(--display); font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--text); }
+.logo span { color: var(--teal); }
 
-.btn{ border:none; outline:none; cursor:pointer; padding:0.8rem 1.4rem; border-radius:8px; font-weight:600; transition:0.3s; text-decoration:none; display:inline-block; }
-.btn-primary{ background:var(--teal); color:#051018; }
-.btn-secondary { background: var(--bg2); color: var(--text); border: 1px solid var(--border2); }
-.btn-secondary:hover { background: rgba(0,230,180,0.06); border-color: var(--teal); color: var(--teal); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.25s; }
+.nav-links a:hover { color: var(--teal); }
 
-/* HERO SECTION */
-.hero{
-  min-height:85vh; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding:10rem 2rem 4rem;
-}
-.badge{
-  background:rgba(0,230,180,0.08); border:1px solid var(--border2); color:var(--teal); padding:0.4rem 1.2rem; border-radius:999px; margin-bottom:2rem; font-family:var(--mono); font-size:0.75rem; letter-spacing:0.5px;
-}
-.hero h1{ font-family:var(--display); font-size:4.8rem; line-height:1.1; max-width:950px; }
-.hero h1 span { color: var(--teal); }
+.btn { border: none; outline: none; cursor: pointer; padding: 0.8rem 1.6rem; border-radius: 8px; font-weight: 600; transition: 0.3s; text-decoration: none; display: inline-block; }
+.btn-primary { background: var(--teal); color: #03080c; box-shadow: 0 4px 15px var(--teal-glow); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0, 230, 180, 0.3); }
+.btn-secondary { background: rgba(255, 255, 255, 0.02); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { background: var(--teal-glow); border-color: var(--teal); color: var(--teal); }
 
-.hero p{ 
-  margin-top: 1.8rem; max-width: 680px; color: var(--text); line-height: 1.4; 
-  font-size: 1.4rem; font-weight: 700; letter-spacing: 0.5px; font-family: var(--display);
-}
+/* HERO SECTOR */
+.hero { min-height: 95vh; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 12rem 2rem 6rem; }
+.badge { background: rgba(0, 230, 180, 0.06); border: 1px solid var(--border); color: var(--teal); padding: 0.5rem 1.2rem; border-radius: 999px; margin-bottom: 2rem; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 1px; }
+.hero h1 { font-family: var(--display); font-size: 5.5rem; line-height: 1.05; max-width: 1000px; font-weight: 800; }
+.hero h1 span { color: var(--teal); text-shadow: 0 0 40px var(--teal-glow); }
+.hero p { margin-top: 2rem; max-width: 600px; color: var(--text); line-height: 1.4; font-size: 1.6rem; font-weight: 700; font-family: var(--display); letter-spacing: 0.5px; }
 .hero p span { color: var(--amber); }
 
-.hero-actions{ 
-  margin-top:3rem; display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap;
-}
-.hero-actions .btn { font-size:1.1rem; padding:1rem 2rem; transition: transform 0.2s ease; }
-.hero-actions .btn:hover { transform: translateY(-2px); }
+.hero-actions { margin-top: 3.5rem; display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.hero-actions .btn { font-size: 1.1rem; padding: 1.1rem 2.2rem; }
 
-/* NEW STRATEGIC TRUST METRICS BAR */
-.metrics-ticker {
-  background: rgba(10, 22, 32, 0.5);
-  border-top: 1px solid var(--border2);
-  border-bottom: 1px solid var(--border2);
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.ticker-item { font-family: var(--mono); font-size: 0.9rem; color: var(--text2); }
-.ticker-item strong { color: var(--teal); font-family: var(--display); font-size: 1.1rem; }
+/* DATA COUNTER METRICS BAR */
+.live-stats { background: rgba(7, 17, 24, 0.6); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2rem; display: flex; justify-content: center; gap: 6rem; flex-wrap: wrap; backdrop-filter: blur(10px); }
+.stat-node { text-align: center; }
+.stat-node div { font-family: var(--display); font-size: 2.2rem; font-weight: 800; color: var(--text); }
+.stat-node div span { color: var(--teal); }
+.stat-node p { font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-top: 0.3rem; letter-spacing: 0.5px; }
 
-/* NEW FEATURE SHOWCASE GRID */
-.features-section {
-  max-width: 1200px;
-  margin: 6rem auto;
-  padding: 0 2rem;
-}
-.section-headline {
-  font-family: var(--display);
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.section-headline span { color: var(--teal); }
+/* BENTO BOX FEATURES LAYOUT */
+.section { padding: 8rem 4rem; max-width: 1300px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 5rem; }
+.section-header h2 { font-family: var(--display); font-size: 3rem; font-weight: 800; }
+.section-header h2 span { color: var(--teal); }
+.section-header p { color: var(--text-muted); margin-top: 1rem; font-size: 1.1rem; max-width: 550px; margin-left: auto; margin-right: auto; }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.feature-box {
-  background: var(--bg2);
-  border: 1px solid rgba(255,255,255,0.03);
-  padding: 2.2rem;
-  border-radius: 12px;
-  transition: all 0.25s ease;
-}
-.feature-box:hover {
-  border-color: var(--border2);
-  transform: translateY(-3px);
-}
-.feat-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
-.feature-box h3 { font-family: var(--display); font-size: 1.2rem; margin-bottom: 0.8rem; font-weight: 700; }
-.feature-box p { color: var(--text2); font-size: 0.95rem; line-height: 1.6; }
+.bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.bento-card { background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 16px; padding: 2.5rem; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); position: relative; overflow: hidden; }
+.bento-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, transparent 70%, rgba(0, 230, 180, 0.02)); opacity: 0; transition: opacity 0.3s; }
+.bento-card:hover { border-color: var(--border); transform: translateY(-4px); background: var(--bg-card-hover); }
+.bento-card:hover::before { opacity: 1; }
 
-@media(max-width:900px) {
-  nav { padding: 1rem 2rem; }
-  .hero h1 { font-size: 3rem; }
-  .hero-actions { flex-direction: column; width: 100%; max-width: 350px; }
-  .hero-actions .btn { width: 100%; text-align: center; }
-  .metrics-ticker { gap: 1.5rem; flex-direction: column; }
+.card-icon { font-size: 2.2rem; display: inline-block; margin-bottom: 1.5rem; }
+.bento-card h3 { font-family: var(--display); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700; }
+.bento-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+/* Bento Sizing Overrides */
+.span-2 { grid-column: span 2; }
+.accent-border { border-top: 3px solid var(--purple); }
+.amber-border { border-top: 3px solid var(--amber); }
+
+/* PIPELINE PIPELINE WORKFLOW PREVIEW */
+.workflow-container { display: flex; justify-content: space-between; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; position: relative; }
+.wf-step { flex: 1; min-width: 240px; background: rgba(255, 255, 255, 0.01); border: 1px dashed rgba(255, 255, 255, 0.08); padding: 2rem; border-radius: 12px; position: relative; }
+.wf-step::after { content: '→'; position: absolute; right: -1rem; top: 40%; font-size: 1.5rem; color: var(--border); }
+.wf-step:last-child::after { content: ''; }
+.wf-num { font-family: var(--mono); color: var(--teal); font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; display: block; }
+.wf-step h4 { font-family: var(--display); font-size: 1.1rem; margin-bottom: 0.5rem; }
+.wf-step p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+
+/* FOOTER ARCHITECTURE */
+footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-family: var(--mono); font-size: 0.8rem; }
+
+@media(max-width:1024px) {
+  nav { padding: 1.2rem 2rem; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .span-2 { grid-column: span 1; }
+  .hero h1 { font-size: 3.5rem; }
+  .live-stats { gap: 3rem; }
+  .wf-step::after { content: '↓'; bottom: -1.5rem; right: 50%; top: auto; }
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo"><span>NEX</span>US</div>
-  <a href="builder.html" class="btn btn-primary">Build Resume</a>
-</nav>
+  <nav>
+    <a href="index.html" class="logo"><span>NEX</span>US</a>
+    <ul class="nav-links">
+      <li><a href="#features">System Features</a></li>
+      <li><a href="#workflow">Deployment Pipeline</a></li>
+      <li><a href="builder.html">Resume Workspace</a></li>
+    </ul>
+    <a href="builder.html" class="btn btn-primary">Launch Engine</a>
+  </nav>
 
-<section class="hero">
-  <div class="badge">NEXUS SYSTEM INTEGRATION v3.0</div>
-  <h1>Elevate Your Thinking.<br>Engineering <span>Your Future.</span></h1>
-  <p>Build. Match. Prepare. <span>Get Hired.</span></p>
-  
-  <div class="hero-actions">
-    <a href="builder.html" class="btn btn-primary">🚀 Build Resume</a>
-    <a href="match.html" class="btn btn-secondary">🎯 AI Smart Matching</a>
-    <a href="interview-prep.html" class="btn btn-secondary">🤖 AI Interview Prep</a>
-  </div>
-</section>
-
-<div class="metrics-ticker">
-  <div class="ticker-item">⚡ REPOSITORIES EVALUATED: <strong>4.2K+</strong></div>
-  <div class="ticker-item">🎯 METRICS MATCH ACCURACY: <strong>98.4%</strong></div>
-  <div class="ticker-item">🔥 ACTIVE PREPARATION STREAKS: <strong>1,850+</strong></div>
-</div>
-
-<section class="features-section">
-  <h2 class="section-headline">Engineered for <span>Next-Gen Placement.</span></h2>
-  
-  <div class="features-grid">
-    <div class="feature-box">
-      <span class="feat-icon">📋</span>
-      <h3>ATS Optimizer</h3>
-      <p>Analyze and reformat your technical presentation layouts to precisely align with core corporate screening criteria and enterprise standards.</p>
-    </div>
+  <section class="hero">
+    <div class="badge">NEXUS MULTI-STAGE MODULE PRO · v3.0</div>
+    <h1>Elevate Your Thinking.<br>Engineering <span>Your Future.</span></h1>
+    <p>Build. Match. Prepare. <span>Get Hired.</span></p>
     
-    <div class="feature-box">
-      <span class="feat-icon">🧬</span>
-      <h3>Smart Matrix Matcher</h3>
-      <p>Instantly compare complex specialized skill architectures against targeting parameters from top engineering firms and strategic networks.</p>
+    <div class="hero-actions">
+      <a href="builder.html" class="btn btn-primary">🚀 Build Resume</a>
+      <a href="match.html" class="btn btn-secondary">🎯 AI Smart Matching</a>
+      <a href="interview-prep.html" class="btn btn-secondary">🤖 AI Interview Prep</a>
     </div>
-    
-    <div class="feature-box">
-      <span class="feat-icon">🎙️</span>
-      <h3>Interactive AI Mock Rounds</h3>
-      <p>Simulate production-level HR, technical architectures, and high-stakes coding assessments with tailored voice or text modal inputs.</p>
+  </section>
+
+  <section class="live-stats">
+    <div class="stat-node">
+      <div>4.2K<span>+</span></div>
+      <p>Resumes Parsed & Scored</p>
     </div>
-  </div>
-</section>
+    <div class="stat-node">
+      <div>98.4<span>%</span></div>
+      <p>Skill Mapping Accuracy</p>
+    </div>
+    <div class="stat-node">
+      <div>10<span>+</span></div>
+      <p>Industry Roles Supported</p>
+    </div>
+    <div class="stat-node">
+      <div>Real-Time</div>
+      <p>Audio feedback response</p>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="section-header">
+      <h2>Engineered to <span>Outperform.</span></h2>
+      <p>Explore specialized technical workflows optimized for targeting tier-1 technology networks and consulting companies.</p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="bento-card span-2">
+        <span class="card-icon">📋</span>
+        <h3>ATS Engine & Structural Analyzer</h3>
+        <p>Drop your layout into a compilation matrix that scans against strict keyword weighting protocols, syntax structuring rules, and industry criteria. Optimize technical presentation profiles for automatic matching workflows seamlessly.</p>
+      </div>
+
+      <div class="bento-card accent-border">
+        <span class="card-icon">🧬</span>
+        <h3>Skill Matrix Mapping</h3>
+        <p>Instantly compare complex arrays of software components, cloud networks, and security layers directly against target requirements from top-tier corporations.</p>
+      </div>
+
+      <div class="bento-card amber-border">
+        <span class="card-icon">🎙️</span>
+        <h3>Multi-Channel Simulation Hub</h3>
+        <p>Practice with interactive options using quick text entries or native direct voice speech processing. Simulate live corporate technical screens, managerial scenarios, and intensive behavioral reviews.</p>
+      </div>
+
+      <div class="bento-card span-2">
+        <span class="card-icon">⚡</span>
+        <h3>Live Compilation Execution Log</h3>
+        <p>Review immediate syntax warnings, system logs, and direct line-by-line feedback markers as you finalize your configuration choices or progress through real-time challenge scripts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="workflow">
+    <div class="section-header">
+      <h2>The Deployment <span>Pipeline</span></h2>
+      <p>A systematic roadmap mapped out to transform raw profiles into interview-ready production assets.</p>
+    </div>
+
+    <div class="workflow-container">
+      <div class="wf-step">
+        <span class="wf-num">STEP // 01</span>
+        <h4>Analyze Matrix</h4>
+        <p>Parse structural layouts to uncover code optimization and technical terminology gaps.</p>
+      </div>
+      <div class="wf-step">
+        <span class="wf-num">STEP // 02</span>
+        <h4>Align Architecture</h4>
+        <p>Map core credentials directly to targeted tech tracks like Cloud, Cyber, or Analytics.</p>
+      </div>
+      <div class="wf-step">
+        <span class="wf-num">STEP // 03</span>
+        <h4>Simulate Staging</h4>
+        <p>Engage in real-time adaptive AI chat and vocal rounds tailored to company profiles.</p>
+      </div>
+      <div class="wf-step">
+        <span class="wf-num">STEP // 04</span>
+        <h4>Track Optimization</h4>
+        <p>Review comprehensive diagnostic feedback reports and accelerate preparation tracks.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 NEXUS WORKSPACE ENVIRONMENT SYSTEMS INC. ALL CORE INFRASTRUCTURE OPERATIONAL.</p>
+  </footer>
 
 </body>
 </html>
