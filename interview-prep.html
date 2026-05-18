@@ -795,7 +795,7 @@ body {
       document.getElementById('apt-config-view').style.display = 'block';
     }
 
-    // UNLIMITED HIGH-SPEED STREAM SPEECH RECOGNITION PIPELINE
+    // UNLIMITED HIGH-SPEED STREAM SPEECH RECOGNITION PIPELINE (PATCHED FOR MOBILE REPETITION)
     function toggleVoiceInput(textareaId, buttonId) {
       const targetTextarea = document.getElementById(textareaId);
       const targetButton = document.getElementById(buttonId);
@@ -818,7 +818,8 @@ body {
       speechRecognizer.interimResults = true; 
       speechRecognizer.lang = 'en-US';
 
-      let finalizedSessionText = targetTextarea.value;
+      // Track text finalized across previous speech boundaries
+      let baselineText = targetTextarea.value.trim();
 
       speechRecognizer.onstart = () => {
         targetButton.innerHTML = `🛑 Stop Stream`;
@@ -829,22 +830,29 @@ body {
       };
 
       speechRecognizer.onresult = (event) => {
-        let currentInterim = '';
-        let newlyFinalized = '';
+        let interimTranscript = '';
+        let finalizedTranscript = '';
 
+        // Process fresh data windows sequentially without duplicating indices
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           if (event.results[i].isFinal) {
-            newlyFinalized += event.results[i][0].transcript + ' ';
+            finalizedTranscript += event.results[i][0].transcript + ' ';
           } else {
-            currentInterim += event.results[i][0].transcript;
+            interimTranscript += event.results[i][0].transcript;
           }
         }
 
-        if (newlyFinalized) {
-          finalizedSessionText = (finalizedSessionText + ' ' + newlyFinalized).replace(/\s+/g, ' ').trim();
+        if (finalizedTranscript) {
+          baselineText = (baselineText + ' ' + finalizedTranscript).replace(/\s+/g, ' ').trim();
         }
         
-        targetTextarea.value = (finalizedSessionText + ' ' + currentInterim).trim();
+        // Combine safe baseline text with ongoing temporary interim audio metrics
+        let completeOutput = baselineText;
+        if (interimTranscript) {
+          completeOutput = (completeOutput + ' ' + interimTranscript).replace(/\s+/g, ' ');
+        }
+
+        targetTextarea.value = completeOutput.trim();
         targetTextarea.scrollTop = targetTextarea.scrollHeight;
       };
 
