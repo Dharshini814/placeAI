@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NEXUS Resume Builder Pro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#050d12;
+  --bg2:#0a1620;
+  --teal:#00e6b4;
+  --teal2:#00c99c;
+  --amber:#f5a623;
+  --text:#e8f4f0;
+  --text2:#9bbab2;
+  --border2:rgba(0,230,180,0.24);
+  --display:'Syne',sans-serif;
+  --body:'DM Sans',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ background:var(--bg); color:var(--text); font-family:var(--body); overflow-x:hidden; }
+
+/* NAVBAR */
+nav{
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1rem 4rem; background:rgba(5,13,18,0.9); backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(0,230,180,0.12);
+}
+.logo{ font-family:var(--display); font-size:1.4rem; font-weight:800; color:var(--teal); }
+.logo span{ color:var(--amber); }
+
+.btn{ border:none; outline:none; cursor:pointer; padding:0.8rem 1.4rem; border-radius:8px; font-weight:600; transition:0.3s; text-decoration:none; display:inline-block; }
+.btn-primary{ background:var(--teal); color:#051018; }
+
+/* Secondary layout design for the new modules */
+.btn-secondary {
+  background: var(--bg2);
+  color: var(--text);
+  border: 1px solid var(--border2);
+}
+.btn-secondary:hover {
+  background: rgba(0,230,180,0.08);
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+/* HERO */
+.hero{
+  min-height:100vh; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding:8rem 2rem 4rem;
+}
+.badge{
+  background:rgba(0,230,180,0.1); border:1px solid var(--border2); color:var(--teal); padding:0.4rem 1rem; border-radius:999px; margin-bottom:2rem; font-family:var(--mono); font-size:0.75rem;
+}
+.hero h1{ font-family:var(--display); font-size:5rem; line-height:1.05; max-width:900px; }
+.hero h1 span{ color:var(--teal); }
+.hero p{ margin-top:1.5rem; max-width:650px; color:var(--text2); line-height:1.8; font-size:1.1rem; }
+
+/* Layout Grid Wrapper for the 3 Horizontal Buttons */
+.hero-actions{ 
+  margin-top:2.5rem; 
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero-actions .btn { 
+  font-size:1.1rem; 
+  padding:1rem 2rem; 
+  transition: all 0.25s ease-in-out;
+}
+.hero-actions .btn:hover {
+  transform: translateY(-2px);
+}
+
+@media(max-width:900px){
+  nav{ padding:1rem; }
+  .hero h1{ font-size:3rem; }
+  .hero-actions { flex-direction: column; width: 100%; max-width: 350px; }
+  .hero-actions .btn { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">NEX<span>US</span></div>
+  <a href="builder.html" class="btn btn-primary">Build Resume</a>
+</nav>
+
+<section class="hero">
+  <div class="badge">NEXUS Workspace v3.0</div>
+  <h1>Workspace <span>Resume Engine</span></h1>
+  <p>A stripped layout configuration baseline workspace setup.</p>
+  
+  <div class="hero-actions">
+    <a href="builder.html" class="btn btn-primary">🚀 Build Resume</a>
+    <a href="match.html" class="btn btn-secondary">🎯 AI Smart Matching</a>
+    <a href="interview-prep.html" class="btn btn-secondary">🤖 AI Interview Prep</a>
+  </div>
+</section>
+
+</body>
+</html>
