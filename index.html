@@ -116,6 +116,95 @@ footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--bor
   .live-stats { gap: 3rem; }
   .wf-step::after { content: '↓'; bottom: -1.5rem; right: 50%; top: auto; }
 }
+  /* ==========================================================================
+   MOBILE & TABLET RESPONSIVE OPTIMIZER MATRIX
+   ========================================================================== */
+@media (max-width: 1024px) {
+  
+  /* 1. Global Page Adjustments */
+  body {
+    padding: 0;
+    overflow-x: hidden; /* Prevents awkward horizontal scrolling on phones */
+  }
+
+  /* 2. Sticky Navbar Realignment */
+  nav {
+    padding: 1rem 2rem; /* Reduces thick desktop padding to fit small screens */
+    justify-content: space-between;
+  }
+  .nav-links {
+    display: none; /* Hides raw horizontal menu links to keep the phone screen clean */
+  }
+
+  /* 3. Hero Layout Scaling */
+  .hero {
+    padding: 8rem 1.5rem 4rem; /* Brings the content up slightly on mobile viewports */
+    min-height: auto;
+  }
+  .hero h1 {
+    font-size: 3rem; /* Downscales massive typography to prevent letter overlapping */
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+  }
+  .hero-actions {
+    flex-direction: column; /* Stacks navigation buttons vertically instead of side-by-side */
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+  }
+  .hero-actions .btn {
+    width: 100%; /* Makes buttons full-width for easy thumb-tapping */
+    text-align: center;
+  }
+
+  /* 4. Live Statistics Node Restructuring */
+  .live-stats {
+    gap: 2.5rem 1.5rem;
+    padding: 2.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Splits stats into a clean 2x2 grid on mobile */
+  }
+  .stat-node div {
+    font-size: 1.8rem; /* Shrinks large stat numbers slightly */
+  }
+
+  /* 5. Bento Grid Layout Flattening */
+  .section {
+    padding: 5rem 1.5rem; /* Tightens outer section spacing */
+  }
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr; /* Forces all cards into a single wide column */
+    gap: 1.2rem;
+  }
+  .span-2 {
+    grid-column: span 1; /* Strips widescreen cards of their double-width span */
+  }
+  .bento-card {
+    padding: 1.8rem; /* Moderates inner card spacing */
+  }
+
+  /* 6. Pipeline Workflow Visual Direction Fix */
+  .workflow-container {
+    flex-direction: column; /* Flattens workflow steps from left-to-right into top-to-bottom */
+    gap: 2rem;
+  }
+  .wf-step {
+    width: 100%;
+  }
+  .wf-step::after {
+    content: '↓'; /* Changes desktop right arrows (→) into mobile down arrows (↓) */
+    right: 50%;
+    bottom: -1.5rem;
+    top: auto;
+    transform: translateX(50%);
+  }
+}
 </style>
 </head>
 <body>
